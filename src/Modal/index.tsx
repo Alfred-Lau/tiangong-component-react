@@ -1,16 +1,18 @@
 import React from 'react';
 import classname from 'classnames';
 import './index.less';
+import { isValidReactElement } from '@/utils/validater';
 
 export interface ModalProps {
   title: string;
   visible: boolean;
   cancel: () => void;
   children: React.ReactElement;
+  footer: React.ReactElement;
 }
 
 const Modal = function (props: ModalProps) {
-  const { title, visible, cancel, children } = props;
+  const { title, visible, cancel, children, footer } = props;
   const modalCls = classname('modal', {
     visible: visible,
   });
@@ -23,7 +25,9 @@ const Modal = function (props: ModalProps) {
           <div className="modal-body">
             <div className="modal-header">{title}</div>
             <div className="modal-content">{children}</div>
-            <div className="modal-footer">我是底部</div>
+            {isValidReactElement(footer) && (
+              <div className="modal-footer">{footer}</div>
+            )}
           </div>
         </div>
       </div>

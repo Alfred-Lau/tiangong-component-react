@@ -1,12 +1,12 @@
 ---
 nav:
-  title: Components
+  title: 组件
   path: /components
 ---
 
 ## Modal
 
-Demo:
+基本用法:
 
 ```tsx
 import React, {useCallback, useState} from 'react';
@@ -28,4 +28,12 @@ export default () => {
 };
 ```
 
-More skills for writing demo: https://d.umijs.org/guide/basic#write-component-demo
+## API
+
+| 参数     | 说明           | 类型               | 默认值 | 版本  |
+| :------- | :------------- | :----------------- | :----- | :---- |
+| title    | 模态框标题     | string             |        | 1.0.0 |
+| visible  | 模态框是否可见 | boolean            |        | 1.0.0 |
+| cancel   | 停止展示       | function           |        | 1.0.0 |
+| footer   | modal 页脚     | React.ReactElement | false  | 1.0.0 |
+| children | 子元素         | React.ReactElement |        | 1.0.0 |
