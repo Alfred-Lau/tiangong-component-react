@@ -1,27 +1,5 @@
 # tiangong-react-component
 
-## Getting Started
+## modal
 
-Install dependencies,
-
-```bash
-$ npm i
-```
-
-Start the dev server,
-
-```bash
-$ npm start
-```
-
-Build documentation,
-
-```bash
-$ npm run docs:build
-```
-
-Build library via `father-build`,
-
-```bash
-$ npm run build
-```
+- display 和transition的冲突问题可能需要引入css 动画库才能解决，推荐 ant-motion
