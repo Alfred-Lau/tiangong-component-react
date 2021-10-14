@@ -18,11 +18,14 @@ const Modal = function (props: ModalProps) {
   });
 
   return (
-    <div className={modalCls}>
+    <div
+      className={modalCls}
+      style={visible ? { display: 'block' } : { display: 'none' }}
+    >
       <div className="modal-drop-filter"></div>
       <div className="modal-wrapper" onClick={cancel}>
-        <div className="modal-inner" onClick={(e) => e.stopPropagation()}>
-          <div className="modal-body">
+        <div className="modal-inner">
+          <div className="modal-body" onClick={(e) => e.stopPropagation()}>
             <div className="modal-header">{title}</div>
             <div className="modal-content">{children}</div>
             {isValidReactElement(footer) && (
