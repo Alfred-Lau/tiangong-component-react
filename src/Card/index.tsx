@@ -19,7 +19,7 @@ function Card(props: CardProps) {
         <img src={img} alt="" className="img" />
         <div className="description">{description}</div>
         <span className="link">
-          <a href={link}></a>
+          <a href={link}>{link}</a>
         </span>
       </div>
     </div>

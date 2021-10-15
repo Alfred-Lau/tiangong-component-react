@@ -1,15 +1,41 @@
+@import '../theme/__mixin.less';
+
 .card {
-  flex-basis: 19%;
   border: 1px solid #aaa;
-  border-radius: 6px;
-  background-color: #eee;
 
-  display: flex;
-  justify-content: center;
-
-  margin: 3px;
-  min-height: 200px;
+  outline: none;
+  border: none;
+  width: 20%;
+  padding: 0 6px 0;
+  margin-bottom: 10px;
+  box-sizing: border-box;
 
   .cardWrapper {
+    width: 100%;
+    background: #fff;
+
+    flex-direction: column;
+    .flex-center();
+    box-shadow: 1px 1px 3px 1px rgba(100, 100, 100, 0.3);
+
+    .title {
+    }
+    .img {
+      width: 100%;
+    }
+    .description {
+      padding: 16px;
+      color: #999;
+    }
+    .link {
+      padding: 16px;
+
+      a {
+        text-decoration: none;
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
   }
 }
