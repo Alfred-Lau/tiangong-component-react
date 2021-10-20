@@ -114,10 +114,10 @@ export default function Calendar() {
         <div className="calendar-body-days" onClick={handleClickDate}>
           <table>
             {dates.map((date) => {
-              const { days = [1, 2, 3, 4, 5, 6, 7] } = date;
+              const { days = [1, 2, 3, 4, 5, 6, 7] } = date as any;
               return (
                 <tr>
-                  {days.map((day) => {
+                  {days.map((day: any) => {
                     return <td>{day}</td>;
                   })}
                 </tr>
