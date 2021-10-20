@@ -37,7 +37,7 @@ export default function Calendar() {
   const currentDate = new Date().getDate();
 
   const handleClickDate = (e: React.MouseEvent<HTMLElement>) => {
-    console.log(e.target.innerText);
+    console.log((e.target as HTMLElement).innerText);
   };
 
   const chooseToday = () => {
