@@ -1,0 +1,83 @@
+.calendar {
+  width: 400px;
+  background-color: #ffe;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  position: relative;
+  &-header {
+    height: 40px;
+    font-size: 16px;
+    line-height: 40px;
+    color: #c3c3c3;
+    width: calc(100% - 40px);
+    text-align: center;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    &-prev-year,
+    &-prev-month,
+    &-next-year,
+    &-next-month {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &-prev-year,
+    &-prev-month {
+      float: left;
+      padding-right: 15px;
+    }
+
+    &-next-year,
+    &-next-month {
+      float: right;
+      padding-left: 15px;
+    }
+  }
+  &-body {
+    width: 100%;
+    margin-bottom: 38px;
+    background-color: #ccc;
+    &-week {
+      width: 100%;
+      ul {
+        display: flex;
+        list-style: none;
+        justify-content: space-around;
+        width: 100%;
+        padding: 0;
+      }
+    }
+
+    &-days {
+      table {
+        width: 100%;
+        text-align: center;
+        td {
+          padding: 8px 0;
+          &:hover {
+            cursor: pointer;
+            background-color: #3c3c3c;
+            color: #ccc;
+          }
+        }
+      }
+    }
+  }
+  &-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: #aaa;
+    width: 100%;
+    padding: 8px 0;
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+}

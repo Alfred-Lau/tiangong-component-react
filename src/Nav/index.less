@@ -1,0 +1,81 @@
+.nav {
+  width: 100%;
+  height: 60px;
+  background-color: #ccc;
+  color: antiquewhite;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  .left {
+    &:first-child {
+      flex-grow: 1;
+      a {
+        text-decoration: none;
+        color: #f3f3f3;
+        .brand {
+        }
+      }
+    }
+  }
+
+  .menu {
+    &-main {
+      display: flex;
+      list-style: none;
+      &-item {
+        padding-left: 20px;
+        padding-right: 20px;
+        position: relative;
+        .popover {
+          position: absolute;
+          display: none;
+          &-menu {
+            list-style: none;
+            display: flex;
+            &-item {
+            }
+          }
+        }
+        &:hover {
+          cursor: pointer;
+
+          .popover {
+            display: block;
+            &-menu {
+              &-item {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .right {
+    display: flex;
+    height: 60px;
+    line-height: 60px;
+
+    .login,
+    .signup {
+      padding: 0 20px;
+      box-sizing: border-box;
+    }
+
+    .login {
+      color: #000;
+    }
+
+    .signup {
+      background-color: #00f;
+      color: #fff;
+    }
+  }
+}
+
+// 移动端设备
+@media (max-width: 768px) {
+  .nav {
+    background-color: #ccc;
+  }
+}
