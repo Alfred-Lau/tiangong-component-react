@@ -1,5 +1,4 @@
 {
-  "private": true,
   "publishConfig": {
     "access": "public"
   },
