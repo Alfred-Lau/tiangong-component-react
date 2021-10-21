@@ -1,4 +1,8 @@
 {
+  "private": true,
+  "publishConfig": {
+    "access": "public"
+  },
   "name": "@tiangongkit/react-component",
   "version": "1.0.0",
   "scripts": {
@@ -12,6 +16,7 @@
     "test": "umi-test",
     "test:coverage": "umi-test --coverage"
   },
+  "files": ["dist"],
   "main": "dist/index.js",
   "module": "dist/index.esm.js",
   "typings": "dist/index.d.ts",
