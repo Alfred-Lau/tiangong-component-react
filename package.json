@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "tiangong-react-component",
+  "name": "@tiangongkit/react-component",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
