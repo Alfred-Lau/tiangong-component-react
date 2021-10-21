@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import classnames from 'classnames';
 import './index.less';
 
 /* 
@@ -16,10 +17,15 @@ import './index.less';
 
 */
 
+export function isNullOrUndefined(t: any): boolean {
+  return t === null || t === undefined;
+}
+
 export type MenuItemType = {
-  id: string;
+  id: number;
   title: string;
   link: string;
+  items: string[];
 };
 
 export type fixedOption = {
@@ -27,20 +33,34 @@ export type fixedOption = {
 };
 
 export type NavProps = {
-  menu: MenuItemType[];
+  menus: MenuItemType[];
   scrollable?: boolean;
   fixed?: fixedOption | boolean;
 };
 
 const Nav = (props: NavProps & { children: React.ReactElement }) => {
   const { children, scrollable, fixed = false } = props;
-  const menus = [
-    ['产品', '服务'],
-    ['理财', '油腻'],
-    ['慈善', '春风十里'],
+  const [active, setActive] = useState(false);
+  const [currentIndex, setCurrentIndex] = useState(0);
+  const menus: MenuItemType[] = [
+    { id: 0, title: '技术体系', link: '', items: ['产品', '服务'] },
+    { id: 1, title: '团队管理', link: '', items: ['理财', '油腻'] },
+    { id: 2, title: '人生逆旅', link: '', items: ['慈善', '春风十里'] },
   ];
 
-  console.log('props options', fixed);
+  const showMore = (id?: number) => {
+    setActive(true);
+    if (!isNullOrUndefined(id)) {
+      setCurrentIndex(id!);
+    }
+  };
+  const showLess = (id?: number) => {
+    setActive(false);
+    if (!isNullOrUndefined(id)) {
+      setCurrentIndex(id!);
+    }
+  };
+
   return (
     <div className="nav">
       <div className="left">
@@ -50,21 +70,37 @@ const Nav = (props: NavProps & { children: React.ReactElement }) => {
       </div>
       <div className="menu">
         <ul className="menu-main">
-          {menus.map((menu) => {
+          {menus.map((menu, index) => {
             return (
-              <li className="menu-main-item">
-                诛仙
-                <div className="popover">
-                  <ul className="popover-menu">
-                    {menu.map((item) => {
-                      return <li className="popover-menu-item">{item}</li>;
-                    })}
-                  </ul>
-                </div>
+              <li
+                className="menu-main-item"
+                onMouseEnter={() => showMore(index)}
+                onMouseLeave={() => showLess(index)}
+              >
+                {menu.title}
               </li>
             );
           })}
         </ul>
+      </div>
+      <div
+        className={classnames('menu-mask', {
+          'menu-mask-active': active,
+        })}
+        onMouseLeave={() => {
+          showLess();
+        }}
+        onMouseEnter={() => {
+          showMore();
+        }}
+      >
+        <div className="popover">
+          <ul className="popover-menu">
+            {menus[currentIndex]?.items.map((item) => {
+              return <li className="popover-menu-item">{item}</li>;
+            })}
+          </ul>
+        </div>
       </div>
       <div className="right">
         <span className="login">登录</span>
