@@ -12,7 +12,7 @@ export default defineConfig({
     '/components': [
       {
         title: '提效组件',
-        children: ['Modal', 'Card', 'Foo', 'Calendar', 'Nav'],
+        children: ['Modal', 'Card', 'Foo', 'Calendar', 'Nav', 'Footer'],
       },
     ],
   },

@@ -9,22 +9,24 @@ nav:
 基本用法:
 
 ```tsx
-import React, {useCallback, useState} from 'react';
-import { Modal } from 'tiangong-react-component';
+import React, { useCallback, useState } from 'react';
+import { Modal } from '@tiangongkit/react-component';
 
 export default () => {
-  const [visible, setVisible] = useState(false)
-  
-  const toggleModal = useCallback(()=>{
-    setVisible(visible=> !visible)
-  },[visible])
+  const [visible, setVisible] = useState(false);
 
-  return (<div>
-   <button onClick={toggleModal}>显示弹窗</button>
-   <Modal title="First Demo" visible={visible} cancel={toggleModal}>
-   我是中心内容
-   </Modal>
-  </div>);
+  const toggleModal = useCallback(() => {
+    setVisible((visible) => !visible);
+  }, [visible]);
+
+  return (
+    <div>
+      <button onClick={toggleModal}>显示弹窗</button>
+      <Modal title="First Demo" visible={visible} cancel={toggleModal}>
+        我是中心内容
+      </Modal>
+    </div>
+  );
 };
 ```
 

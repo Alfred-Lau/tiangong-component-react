@@ -4,20 +4,16 @@ nav:
   path: /components
 ---
 
-## Calendar
+## Footer
 
 基本用法:
 
 ```tsx
 import React, { useCallback, useState } from 'react';
-import { Calendar } from '@tiangongkit/react-component';
+import { Footer } from '@tiangongkit/react-component';
 
 export default () => {
-  return (
-    <div>
-      <Calendar></Calendar>
-    </div>
-  );
+  return <Footer>我是中心内容</Footer>;
 };
 ```
 

@@ -10,7 +10,7 @@ nav:
 
 ```tsx
 import React from 'react';
-import { Foo } from 'tiangong-react-component';
+import { Foo } from '@tiangongkit/react-component';
 
 export default () => {
   return <Foo />;
