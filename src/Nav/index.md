@@ -18,7 +18,13 @@ export default () => {
     { id: 1, title: '团队管理', link: '', items: ['理财', '油腻'] },
     { id: 2, title: '人生逆旅', link: '', items: ['慈善', '春风十里'] },
   ];
-  return <Nav menus={menus} fixed />;
+  return (
+    <Nav
+      menus={menus}
+      fixed
+      logo="https://lazy-minus-your-intelligence.com/assets/avatar.png"
+    />
+  );
 };
 ```
 

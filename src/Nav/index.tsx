@@ -36,10 +36,11 @@ export type NavProps = {
   menus: MenuItemType[];
   scrollable?: boolean;
   fixed?: fixedOption | boolean;
+  logo: string;
 };
 
-const Nav = (props: NavProps & { children: React.ReactElement }) => {
-  const { children, scrollable, fixed = false, menus } = props;
+const Nav = (props: NavProps & { children?: React.ReactElement }) => {
+  const { children, scrollable, fixed = false, menus, logo } = props;
   const [active, setActive] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
@@ -60,7 +61,7 @@ const Nav = (props: NavProps & { children: React.ReactElement }) => {
     <div className="nav">
       <div className="left">
         <a href="https://work_harder.com">
-          <img src="" alt="brand" className="brand" />
+          <img src={logo} alt="brand" className="brand" height="100%" />
         </a>
       </div>
       <div className="menu">
