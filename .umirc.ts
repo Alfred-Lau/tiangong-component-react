@@ -21,6 +21,7 @@ export default defineConfig({
           'Footer',
           'Table',
           'Form',
+          'Part',
         ],
       },
     ],
