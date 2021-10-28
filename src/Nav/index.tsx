@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import './index.less';
 
@@ -44,6 +44,31 @@ const Nav = (props: NavProps & { children?: React.ReactElement }) => {
   const [active, setActive] = useState(false);
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollHeight = document.body.scrollTop
+        ? document.body.scrollTop
+        : document.documentElement.scrollTop;
+      const target = document.querySelector('.tiangong-nav') as HTMLElement;
+
+      if (scrollHeight > 80) {
+        target.style.position = 'fixed';
+        target.style.zIndex = '1000';
+        target.style.top = '0';
+        target.style.left = '0';
+      } else {
+        target.style.position = 'relative';
+        target.style.zIndex = '0';
+      }
+    };
+    if (fixed) {
+      // target：支持吸顶, 默认距离顶部 80px
+      window.addEventListener('scroll', handleScroll);
+    }
+
+    return window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   const showMore = (id?: number) => {
     setActive(true);
     if (!isNullOrUndefined(id)) {
@@ -58,7 +83,7 @@ const Nav = (props: NavProps & { children?: React.ReactElement }) => {
   };
 
   return (
-    <div className="nav">
+    <div className="tiangong-nav">
       <div className="left">
         <a href="https://work_harder.com">
           <img src={logo} alt="brand" className="brand" height="100%" />
