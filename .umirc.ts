@@ -22,6 +22,7 @@ export default defineConfig({
           'Table',
           'Form',
           'Part',
+          'SideMenu',
         ],
       },
     ],

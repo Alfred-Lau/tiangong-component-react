@@ -7,3 +7,4 @@ export { default as Footer } from './Footer';
 export { default as Table } from './Table';
 export { default as Form } from './Form';
 export { default as Part } from './Part';
+export { default as SideMenu } from './SideMenu';
