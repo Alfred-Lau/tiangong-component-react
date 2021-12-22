@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import classnames from 'classnames';
 import './index.less';
 
-/* 
+/*
 ## 技术方案设计
 
 ### PC 端
@@ -85,8 +85,8 @@ const Nav = (props: NavProps & { children?: React.ReactElement }) => {
   return (
     <div className="tiangong-nav">
       <div className="left">
-        <a href="https://work_harder.com">
-          <img src={logo} alt="brand" className="brand" height="100%" />
+        <a href={window.location.href}>
+          <img src={logo} alt="brand" className="brand" height="60px" />
         </a>
       </div>
       <div className="menu">
