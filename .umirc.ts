@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: '天工组件库',
+  title: '天工 React 组件库',
   favicon:
     'https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico',
   logo: 'https://lazy-minus-your-intelligence.oss-cn-qingdao.aliyuncs.com/favicon.ico',
@@ -23,6 +23,7 @@ export default defineConfig({
           'Form',
           'Part',
           'SideMenu',
+          'FilterHeader'
         ],
       },
     ],
