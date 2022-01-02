@@ -8,4 +8,4 @@ export { default as Table } from './Table';
 export { default as Form } from './Form';
 export { default as Part } from './Part';
 export { default as SideMenu } from './SideMenu';
-export { default as FilterHeader } from './FilterHeader'
+export { default as FixedHeader } from './FixedHeader';

@@ -23,7 +23,7 @@ export default defineConfig({
           'Form',
           'Part',
           'SideMenu',
-          'FilterHeader'
+          'FixedHeader',
         ],
       },
     ],
