@@ -8,10 +8,11 @@ export type CardProps = {
   img: string;
   description: string;
   link: string;
+  swipe?: boolean;
 };
 
 function Card(props: CardProps) {
-  const { title, img, description, link } = props;
+  const { title, img, description, link, swipe } = props;
   return (
     <div className="card">
       <div className="cardWrapper">

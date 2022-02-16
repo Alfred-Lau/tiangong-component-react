@@ -69,6 +69,19 @@ export default () => {
 
   return (
     <div>
+      <CardGroup swipe>
+        {cards?.map((card) => {
+          return (
+            <Card
+              title={card.title}
+              key={card.id}
+              description={card.description}
+              link={card.link}
+              img={card.src}
+            />
+          );
+        })}
+      </CardGroup>
       <CardGroup>
         {cards?.map((card) => {
           return (
@@ -89,6 +102,10 @@ export default () => {
 
 ## API
 
-| 参数  | 说明       | 类型   | 默认值 | 版本  |
-| :---- | :--------- | :----- | :----- | :---- |
-| title | 模态框标题 | string |        | 1.0.0 |
+| 参数        | 说明                   | 类型    | 默认值 | 版本  |
+| :---------- | :--------------------- | :------ | :----- | :---- |
+| title       | 卡片标题               | string  |        | 1.0.0 |
+| description | 卡片描述               | string  |        | 1.0.0 |
+| link        | 卡片链接               | string  |        | 1.0.0 |
+| img         | 卡片背景图             | string  |        | 1.0.0 |
+| swipe       | 是否支持滑动【不换行】 | boolean |        | 1.0.0 |
