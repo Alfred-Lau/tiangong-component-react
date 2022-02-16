@@ -4,6 +4,8 @@ nav:
   path: /components
 ---
 
+是否进行移动端适配：是
+
 ## Footer
 
 基本用法:

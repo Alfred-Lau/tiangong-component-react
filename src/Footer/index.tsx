@@ -1,5 +1,13 @@
 import React from 'react';
+import MediaQuery from 'react-responsive';
+import PCFooter from '@/Footer/pc';
+import H5Footer from '@/Footer/h5';
+import { MIN_WIDTH } from '@/constant';
 import './index.less';
+
+export type FooterProps = {
+  copyright: string | React.ReactElement;
+};
 
 const Footer: React.FC = () => {
   const datas = [
@@ -78,31 +86,14 @@ const Footer: React.FC = () => {
     },
   ];
   return (
-    <div className="footer">
-      <div className="footer-main">
-        <ul className="footer-main-ul">
-          {datas.map((data) => {
-            return (
-              <li className="item">
-                <h4>{data.name}</h4>
-                <ul className="products">
-                  {data.items.map((item) => {
-                    return (
-                      <li className="product-item">
-                        <a href={item.link} target="_blank">
-                          {item.title}
-                        </a>
-                      </li>
-                    );
-                  })}
-                </ul>
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-      <div className="copyright">烽火彼岸，黄金沙滩</div>
-    </div>
+    <>
+      <MediaQuery minWidth={MIN_WIDTH}>
+        <PCFooter datas={datas}></PCFooter>
+      </MediaQuery>
+      <MediaQuery maxWidth={MIN_WIDTH}>
+        <H5Footer datas={datas}></H5Footer>
+      </MediaQuery>
+    </>
   );
 };
 
