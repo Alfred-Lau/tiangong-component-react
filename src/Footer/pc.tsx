@@ -1,6 +1,8 @@
 import React, { FC } from 'react';
 
-const PCFooter: FC = (props) => {
+export type FooterProps = { datas: { title: string; link: string } };
+
+const PCFooter: FC<FooterProps> = (props) => {
   const { datas } = props;
   return (
     <div className="footer">

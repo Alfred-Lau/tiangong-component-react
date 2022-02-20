@@ -1,7 +1,8 @@
-import React from 'react';
-import { FC } from 'react';
+import React, { FC } from 'react';
 
-const H5Footer: FC = (props) => {
+export type FooterProps = { datas: { title: string; link: string } };
+
+const H5Footer: FC<FooterProps> = (props) => {
   const { datas } = props;
   return <div>h5 footer</div>;
 };
