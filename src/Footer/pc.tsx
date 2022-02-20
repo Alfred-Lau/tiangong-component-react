@@ -13,7 +13,7 @@ const PCFooter: FC<FooterProps> = (props) => {
               <li className="item">
                 <h4>{data.name}</h4>
                 <ul className="products">
-                  {data.items.map((item) => {
+                  {data.items.map((item: any) => {
                     return (
                       <li className="product-item">
                         <a href={item.link} target="_blank">
