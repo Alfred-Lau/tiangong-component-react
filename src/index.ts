@@ -10,3 +10,4 @@ export { default as Form } from './Form';
 export { default as Part } from './Part';
 export { default as SideMenu } from './SideMenu';
 export { default as FixedHeader } from './FixedHeader';
+export { default as SearchBox } from './SearchBox';
