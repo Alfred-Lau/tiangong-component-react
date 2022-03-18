@@ -11,7 +11,7 @@ nav:
 基本用法:
 
 ```tsx
-import React, { useCallback, useState } from 'react';
+import React from 'react';
 import { HoverCard } from '@tiangongkit/react-component';
 
 export default () => {

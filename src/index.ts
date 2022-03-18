@@ -11,3 +11,4 @@ export { default as Part } from './Part';
 export { default as SideMenu } from './SideMenu';
 export { default as FixedHeader } from './FixedHeader';
 export { default as SearchBox } from './SearchBox';
+export { default as ImagePreview } from './ImagePreview';
