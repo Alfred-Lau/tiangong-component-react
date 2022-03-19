@@ -26,6 +26,7 @@ export default () => {
       value={searchValue}
       onSearch={handleSearch}
       onChange={handleSearch}
+      action={'/api/search'}
     />
   );
 };
@@ -36,5 +37,6 @@ export default () => {
 | 参数     | 说明           | 类型   | 默认值 | 版本  |
 | :------- | :------------- | :----- | :----- | :---- |
 | value    | 搜索受控关键词 | string |        | 1.0.0 |
+| action   | 搜索服务地址   | string |        | 1.0.0 |
 | onChange | 输入回调       | string |        | 1.0.0 |
 | onSearch | 搜索回调       | string |        | 1.0.0 |
