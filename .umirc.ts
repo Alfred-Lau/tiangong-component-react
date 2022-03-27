@@ -27,6 +27,7 @@ export default defineConfig({
           'FixedHeader',
           'SearchBox',
           'ImagePreview',
+          'SideUp',
         ],
       },
     ],

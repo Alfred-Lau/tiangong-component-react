@@ -12,3 +12,4 @@ export { default as SideMenu } from './SideMenu';
 export { default as FixedHeader } from './FixedHeader';
 export { default as SearchBox } from './SearchBox';
 export { default as ImagePreview } from './ImagePreview';
+export { default as SideUp } from './SideUp';
